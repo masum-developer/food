@@ -12,7 +12,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
-                            <span>Chefs Corner</span>
+                            <span className='display-6'>Chefs Corner</span>
                         </Nav>
                         <Nav className="mx-auto">
                             <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark')} to="/">Home</NavLink>
