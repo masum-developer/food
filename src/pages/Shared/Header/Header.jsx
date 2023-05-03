@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
-    
+    const { user,logOut } = useContext(AuthContext);
+    const handleLogOut = ()=>{
+        logOut()
+        .then()
+        .catch(error=>console.log(error))
+    }
     return (
 
         <Container>
@@ -21,11 +27,19 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Button variant="dark">Logout</Button>:
-                            <Link to='/login'><Button variant="dark">Login</Button></Link>
-                            <span className='' style={{ width: '35px' }}>
-                                <img className='img-fluid rounded-circle' src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-1-800x800.jpg" alt="" />
+                            <span className='' style={{ width: '35px',marginRight:'10px' }}>
+                                {
+                                    user && <img title={user.displayName} className='img-fluid rounded-circle' src={user.photoURL} alt="" />
+                                }
+
                             </span>
+                            {
+
+                              user ?<Button onClick={handleLogOut} variant="dark">Logout</Button>:
+                            <Link to='/login'><Button variant="dark">Login</Button></Link>
+                            }
+
+                            
 
                         </Nav>
                     </Navbar.Collapse>
