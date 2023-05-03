@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {Carousel, Col, Container, Row } from 'react-bootstrap';
-import LeftNav from '../Shared/LeftNav/LeftNav';
+import {Carousel, Container} from 'react-bootstrap';
 import ChefSection from '../../components/ChefSection';
 import { useLoaderData } from 'react-router-dom';
 

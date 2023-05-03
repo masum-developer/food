@@ -5,9 +5,9 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn,googleLogin,githubLogin} = useContext(AuthContext);
     const location = useLocation();
-    console.log('login page',location)
+    //console.log('login page',location)
     const from = location.state?.from?.pathname || '/';
     const navigate = useNavigate();
     const handleLogin = e => {
@@ -18,6 +18,25 @@ const Login = () => {
         signIn(email,password)
         .then(result=>{
            const loggedUser = result.user;
+            console.log(loggedUser)
+            navigate(from, { replace: true })
+        })
+        .catch(error=>console.log(error))
+
+    }
+    const handleGoogleLogin = ()=>{
+        googleLogin()
+        .then(result=>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            navigate(from, { replace: true })
+        })
+        .catch(error=>console.log(error))
+    }
+    const handleGithubLogin = ()=>{
+        githubLogin()
+        .then(result=>{
+            const loggedUser = result.user;
             console.log(loggedUser)
             navigate(from, { replace: true })
         })
@@ -53,8 +72,8 @@ const Login = () => {
 
                     </Form.Text>
                 </Form>
-                <Button className='mb-2 mt-5' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
-                <Button variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
+                <Button onClick={handleGoogleLogin} className='mb-2 mt-5' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
+                <Button onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
             </Container>
         </div>
     );

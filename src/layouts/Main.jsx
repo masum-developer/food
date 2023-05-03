@@ -7,7 +7,10 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
+            <div className='h-75'>
             <Outlet></Outlet>
+            </div>
+            
             <Footer></Footer>
         </div>
     );

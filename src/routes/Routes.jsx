@@ -21,12 +21,12 @@ const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/chefs')
+            loader:()=>fetch('https://chef-recipe-server-masum-developer.vercel.app/chefs')
         },
         {
             path:'recipe/:id',
             element:<PrivateRoute><ChefRecipe></ChefRecipe></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/chefs/${params.id}`)
+            loader:({params})=>fetch(`https://chef-recipe-server-masum-developer.vercel.app/chefs/${params.id}`)
         },
         {
             path:'login',
