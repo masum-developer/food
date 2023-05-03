@@ -6,12 +6,12 @@ const ChefSection = ({chef}) => {
     console.log(chef?.chef_name)
     
     return (
-        <div>
+        <div className='py-5'>
 
-            <Card style={{ width: '18rem' }} className='d-flex align-items flex-column margin-top'>
+            <Card style={{ width: '18rem' }} className='d-flex align-items flex-column'>
                 <Card.Img variant="top" src="" />
                 <Card.Body>
-                    <img style={{ width: '100px' }} src={chef?.chef_picture} alt="" />
+                    <img style={{ width:'100px',height:'100px' }} className='img-fluid' src={chef?.chef_picture} alt="" />
                     <Card.Title>{chef?.chef_name}</Card.Title>
                     <Card.Text>
                         <p>Years of Experience:{chef.years_of_experience}</p>

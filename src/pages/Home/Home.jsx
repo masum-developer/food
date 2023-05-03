@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import {Carousel, Container} from 'react-bootstrap';
 import ChefSection from '../../components/ChefSection';
 import { useLoaderData } from 'react-router-dom';
+import RecipeCategories from '../../components/RecipeCategories';
+import Subscribe from '../../components/Subscribe';
 
 const Home = () => {
     const [chefInfo,setChefInfo]= useState([])
@@ -70,12 +72,13 @@ const Home = () => {
             }
 
             </div>
-
-         
-
-
       </div>
+      <div>
+        <RecipeCategories></RecipeCategories>
+      </div>
+      
       </Container>
+      <Subscribe></Subscribe>
         
             </>
         
