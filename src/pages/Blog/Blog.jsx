@@ -5,9 +5,7 @@ import ReactPrint from 'react-to-print';
 
 const Blog = () => {
     const ref = useRef()
-    const makePdf = () => {
-        alert('mmm')
-    }
+    
     return (
         <div style={{marginBottom:'20px'}}>
             <header className='text-end container'>
@@ -21,15 +19,15 @@ const Blog = () => {
             <div  className='container mb-5'>
                 <h4>Tell us the differences between uncontrolled and controlled components.</h4>
                 <p>
-                    Controlled components are React components that have their value controlled by React, typically using state. They require an event handler to update the value, and every change to the component's value is reflected in the state.
+                    Controlled components are React components that have their value controlled by React, typically using state. They require an event handler to update the value and every change to the components value is reflected in the state.
 
                     Controlled components are typically used in forms where you want to have complete control over the data being entered by the user. You can use these components to enforce specific input formats or to validate data before submitting it to the server.
 
-                    Uncontrolled components are React components that store their own state internally using refs. The state is not controlled by React, but rather by the component itself. Uncontrolled components can be useful in situations where you don't need to enforce specific input formats or validate data before submitting it to the server.
+                    Uncontrolled components are React components that store their own state internally using refs. The state is not controlled by React . Uncontrolled components can be useful in situations where we don't need to enforce specific input formats or validate data before submitting it to the server.
                     Controlled components have their value controlled by React state, while uncontrolled components store their own state using refs.
 
                     Controlled components require an event handler to update the value, while uncontrolled components do not.
-                    Controlled components are typically used in forms where you need to enforce specific input formats or validate data, while uncontrolled components are useful in situations where you don't need that level of control.
+                    Controlled components are typically used in forms where we need to enforce specific input formats or validate data, while uncontrolled components are useful in situations where we don't need that level of control.
 
                 </p>
             </div>
@@ -39,16 +37,16 @@ const Blog = () => {
             <div className='container mb-5'>
                 <h4>How to validate React props using PropTypes?</h4>
                 <p>
-                    Props are an important mechanism for passing the read-only attributes to React components. The props are usually required to use correctly in the component. If it is not used correctly, the components may not behave as expected. Hence, it is required to use props validation in improving react components.
+                    Props are an important mechanism for passing the read only attributes to React components. The props are usually required to use correctly in the component. If it is not used correctly  the components may not behave as expected.
                     React provides a useful library called PropTypes that allows you to define the types of props that a component should receive. This library helps you catch bugs and errors early in development by checking that the props are of the expected type.
 
-                    Props validation is a tool that will help the developers to avoid future bugs and problems. It is a useful way to force the correct usage of your components. It makes your code more readable. React components used special property PropTypes that help you to catch bugs by validating data types of values passed through props, although it is not necessary to define components with propTypes. However, if you use propTypes with your components, it helps you to avoid unexpected bugs.
+                    Props validation is a tool that will help the developers to avoid future bugs and problems. It is a useful way to force the correct usage of your components. It makes your code more readable. React components used special property PropTypes that help you to catch bugs by validating data types of values passed through props, although it is not necessary to define components with propTypes. However, if we use propTypes with our components, it helps us to avoid unexpected bugs.
 
 
                     App.propTypes is used for props validation in react component. When some of the props are passed with an invalid type, you will get the warnings on JavaScript console. After specifying the validation patterns, you will set the App.defaultProps.
 
 
-                    Properties validation is a useful way to force the correct usage of the components. This will help during development to avoid future bugs and problems, once the app becomes larger. It also makes the code more readable, since we can see how each component should be used
+                    Properties validation is a useful way to force the correct usage of the components. This will help during development to avoid future bugs and problems. It also makes the code more readable.
 
 
                     React Props are an important mechanism in our application, since they read-only and immutable, the React props validation becomes a big issue because props used to transfer data from one component to another component. If the component gets wrong data then it leads to bugs or unexpected errors. Since JavaScript does not have an inbuilt type checking system.
@@ -76,7 +74,7 @@ const Blog = () => {
 
                     Both Node.js and Express.js are designed to be highly scalable and performant, but Express.js provides additional features and tools that can help developers optimize their web applications for better performance and scalability.
 
-                    In summary, Node.js provides a powerful runtime environment for executing JavaScript on the server-side, while Express.js provides a web application framework built on top of Node.js that adds additional tools and features for building web applications with Node.js. Express.js is designed to make it easier to build web applications and provide more robust functionality than Node.js alone.
+                    In summary, Node.js provides a powerful runtime environment for executing JavaScript on the server-side, while Express.js provides a web application framework built on top of Node.js that adds additional tools and features for building web applications with Node.js.
 
 
 
@@ -87,7 +85,7 @@ const Blog = () => {
             <div className='container mb-5'>
                 <h4>What is a custom hook, and why will you create a custom hook?</h4>
                 <p>
-                    Custom Hook is a JavaScript function which we create by ourselves, when we want to share logic between other JavaScript functions or component.
+                    Custom Hook is a JavaScript function which we create by ourselves when we want to share logic between other JavaScript functions or component.
                     Custom Hooks start with "use". Example: useFetch, useLocalStorage ,useAuthentication
 
                     You would create a custom hook in order to reuse functionality that is needed in multiple components. By creating a custom hook, you can avoid duplicating code across different components and simplify our code. Custom hooks can also make easier to test code. When we have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
