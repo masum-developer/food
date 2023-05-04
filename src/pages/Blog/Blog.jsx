@@ -48,9 +48,6 @@ const Blog = () => {
 
                     Properties validation is a useful way to force the correct usage of the components. This will help during development to avoid future bugs and problems. It also makes the code more readable.
 
-
-                    React Props are an important mechanism in our application, since they read-only and immutable, the React props validation becomes a big issue because props used to transfer data from one component to another component. If the component gets wrong data then it leads to bugs or unexpected errors. Since JavaScript does not have an inbuilt type checking system.
-
                     React Props validation can be described as a program that can assist developers in avoiding any future bugs or issues. It is a great tool to enforce the correct use of your components. React components have unique properties called propType. PropTypes help you identify bugs by validating data types of the values transmitted through props. However, it is not necessary to create components that use propTypes.
 
                     propTypes is used to verify the input type for props in react. If you try to put any other type, then it will give you warning in console. For example, if you set name should be string, but you pass something else like number then it will give you warning in console and also the result might get different. After you define patterns in for propTypes you should set default values for props as well.
@@ -65,19 +62,10 @@ const Blog = () => {
 
                     Node.js provides a runtime environment for executing JavaScript code on the server-side, while Express.js is a framework that provides additional tools and features for building web applications with Node.js.
 
-
-                    Node.js provides basic functionality for handling HTTP/HTTPS requests and responses, while Express.js extends this functionality with a more robust and flexible routing system, middleware support, and more.
-
                     Express.js provides a routing system that makes it easy to define routes for handling specific requests and sending back corresponding responses. Node.js provides some basic routing functionality, but it is much less flexible and requires more manual configuration.
                     Express.js provides a middleware system that allows developers to easily add additional functionality to their web applications, such as logging, authentication, and more. Node.js does not provide this level of built-in middleware support.
 
-
-                    Both Node.js and Express.js are designed to be highly scalable and performant, but Express.js provides additional features and tools that can help developers optimize their web applications for better performance and scalability.
-
                     In summary, Node.js provides a powerful runtime environment for executing JavaScript on the server-side, while Express.js provides a web application framework built on top of Node.js that adds additional tools and features for building web applications with Node.js.
-
-
-
 
                 </p>
             </div>
