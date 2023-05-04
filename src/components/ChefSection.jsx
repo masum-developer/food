@@ -12,7 +12,7 @@ const ChefSection = ({chef}) => {
             <Card className='d-flex align-items flex-column'>
                 <Card.Img variant="top" src="" />
                 <Card.Body>
-                <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                <LazyLoad height={300} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
                     <img style={{ width:'100%',height:'300px' }} className='img-fluid' src={chef?.chef_picture} />
                     </LazyLoad>
                     

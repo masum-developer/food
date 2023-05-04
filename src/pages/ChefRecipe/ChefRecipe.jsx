@@ -20,7 +20,7 @@ const ChefRecipe = () => {
                     <p>{biography}</p>
                     <p>Likes:{likes}</p>
                     <p>No of Recipes:{number_of_recipes}</p>
-                    <p>Eperience:{years_of_experience}</p>
+                    <p>Experience:{years_of_experience}</p>
                 </div>
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
