@@ -68,7 +68,7 @@ const Home = () => {
             
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
             {
-                chefData.map(chef=><ChefSection chef={chef} key={chef.id}></ChefSection>)
+              chefData && chefData.map(chef=><ChefSection chef={chef} key={chef.id}></ChefSection>)
             }
 
             </div>

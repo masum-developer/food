@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
+    const [error,setError] = useState('');
     const {signIn,googleLogin,githubLogin} = useContext(AuthContext);
     const location = useLocation();
     //console.log('login page',location)
@@ -19,9 +20,13 @@ const Login = () => {
         .then(result=>{
            const loggedUser = result.user;
             console.log(loggedUser)
+            setError('')
+            
             navigate(from, { replace: true })
         })
-        .catch(error=>console.log(error))
+        .catch(error=>{
+            setError(error.message)
+        })
 
     }
     const handleGoogleLogin = ()=>{
@@ -72,6 +77,7 @@ const Login = () => {
 
                     </Form.Text>
                 </Form>
+                <p className='text-danger'>{error}</p>
                 <Button onClick={handleGoogleLogin} className='mb-2 mt-5' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
                 <Button onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
             </Container>

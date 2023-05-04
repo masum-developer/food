@@ -13,7 +13,7 @@ const Header = () => {
     return (
 
         <div className='sticky-top'>
-            <Container>
+            
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <Container>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -46,7 +46,7 @@ const Header = () => {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </Container>
+            
         </div>
     );
 };

@@ -31,10 +31,12 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signOut(auth);
     }
-    const userProfile = (displayName,photoURL)=>{
-        setLoading(true);
+    const userProfile = (dName,pURL)=>{
+        
+        console.log(pURL)
         return updateProfile(auth.currentUser, {
-  displayName, photoURL
+  
+  displayName: {dName}, photoURL: {pURL}
 })
     }
     useEffect(()=>{
