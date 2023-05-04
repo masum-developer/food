@@ -16,19 +16,25 @@ const SingleRecipe = ({rec}) => {
     return (
         <div className='py-5 mb-5'>
 
-            <Card style={{height:'45rem'}} className='d-flex align-items flex-column'>
+            <Card style={{height:'48rem'}} className='d-flex align-items flex-column'>
                 <Card.Img variant="top" src="" />
                 <Card.Body>
                     
                     <Card.Title>{recipe_name}</Card.Title>
                     <Card.Text>
-                        <p>Recipe: </p>
-                    {cooking_method}
+                        <p>Recipe:</p>
+                        <p>{cooking_method}</p>
+                    
                     </Card.Text>
                     <Card.Text>
                     <p>Ingredients:</p>
-                        {ingredients}
+                        <p>{ingredients}</p>
                     </Card.Text>
+                    <Card.Text>
+                    <p>Rating: {rating}</p>
+                        
+                    </Card.Text>
+                    
                     
                     
                 </Card.Body>

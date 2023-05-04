@@ -17,12 +17,12 @@ const Home = () => {
                         <Carousel.Item>
                             <img style={{height:'450px'}}
                                 className="img-fluid w-100"
-                                src="slider1.jpg"
+                                src="slide1.jpg"
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                <h3>Pepperoni</h3>
+                                <p>Pepperoni is a spicy American sausage made from cured beef and pork, typically seasoned with paprika or chili pepper</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -34,22 +34,22 @@ const Home = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3>Burger</h3>
+                                <p>A delicious burger made with a juicy and flavorful ham patty, topped with fresh veggies and melted cheese.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                             style={{height:'450px'}}
                                 className="img-fluid w-100"
-                                src="slider3.jpg"
+                                src="slide4.jpg"
                                 alt="Third slide"
                             />
 
                             <Carousel.Caption>
-                                <h3>Third slide label</h3>
+                                <h3>Vegetables</h3>
                                 <p>
-                                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                Plant-based cuisine that's flavorful, healthy, and environmentally friendly.
                                 </p>
                             </Carousel.Caption>
                         </Carousel.Item>

@@ -9,10 +9,9 @@ const ChefRecipe = () => {
     console.log(recipe)
     return (
         <div>
-        
             <div className='d-flex bg-info'>
                 <div style={{width:'48%'}} >
-                <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                <LazyLoad height={305} threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
                 <img className='img-fluid' style={{height:'305px',width:'100%'}} src={chef_picture} alt="" />
                 </LazyLoad>
                 </div>
@@ -24,7 +23,7 @@ const ChefRecipe = () => {
                     <p>Eperience:{years_of_experience}</p>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 {
                    recipes && recipes.map(rec=><SingleRecipe key={rec.id} rec={rec}></SingleRecipe>)
                 }

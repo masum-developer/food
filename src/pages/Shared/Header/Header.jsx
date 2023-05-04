@@ -22,8 +22,13 @@ const Header = () => {
                                 <span className='display-6'>Chefs Corner</span>
                             </Nav>
                             <Nav className="mx-auto">
-                                <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark')} to="/">Home</NavLink>
-                                <NavLink className="ms-5" to="/blog">Blog</NavLink>
+                                <span className='me-5'>
+                                <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark text-decoration-none')} to="/">Home</NavLink>
+                                </span>
+                                <span>
+                                <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark text-decoration-none')} to="/blog">Blog</NavLink>
+                                </span>
+                        
 
 
                             </Nav>

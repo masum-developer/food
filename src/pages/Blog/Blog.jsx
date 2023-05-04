@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { FaFilePdf} from "react-icons/fa";
+
+import ReactPrint from 'react-to-print';
 
 const Blog = () => {
+    const ref = useRef()
+    const makePdf = () => {
+        alert('mmm')
+    }
     return (
-        <div>
+        <div style={{marginBottom:'20px'}}>
+            <header className='text-end container'>
+
+                
+                <ReactPrint trigger={()=><FaFilePdf style={{fontSize:'50px'}} className='text-danger'></FaFilePdf>} content = {()=>ref.current} />
+            </header>
             <h2 className='text-center'>Blog</h2>
 
-            <section className='container mb-5'>
+            <div ref={ref}>
+            <div  className='container mb-5'>
                 <h4>Tell us the differences between uncontrolled and controlled components.</h4>
                 <p>
                     Controlled components are React components that have their value controlled by React, typically using state. They require an event handler to update the value, and every change to the component's value is reflected in the state.
 
                     Controlled components are typically used in forms where you want to have complete control over the data being entered by the user. You can use these components to enforce specific input formats or to validate data before submitting it to the server.
-
-
 
                     Uncontrolled components are React components that store their own state internally using refs. The state is not controlled by React, but rather by the component itself. Uncontrolled components can be useful in situations where you don't need to enforce specific input formats or validate data before submitting it to the server.
                     Controlled components have their value controlled by React state, while uncontrolled components store their own state using refs.
@@ -21,9 +32,11 @@ const Blog = () => {
                     Controlled components are typically used in forms where you need to enforce specific input formats or validate data, while uncontrolled components are useful in situations where you don't need that level of control.
 
                 </p>
-            </section>
+            </div>
+            
 
-            <section className='container mb-5'>
+
+            <div className='container mb-5'>
                 <h4>How to validate React props using PropTypes?</h4>
                 <p>
                     Props are an important mechanism for passing the read-only attributes to React components. The props are usually required to use correctly in the component. If it is not used correctly, the components may not behave as expected. Hence, it is required to use props validation in improving react components.
@@ -44,9 +57,9 @@ const Blog = () => {
 
                     propTypes is used to verify the input type for props in react. If you try to put any other type, then it will give you warning in console. For example, if you set name should be string, but you pass something else like number then it will give you warning in console and also the result might get different. After you define patterns in for propTypes you should set default values for props as well.
                 </p>
-            </section>
+            </div>
 
-            <section className='container mb-5'>
+            <div className='container mb-5'>
                 <h4>Tell us the difference between nodejs and express js.</h4>
                 <p>
                     Node.js is a server-side JavaScript runtime environment, while Express.js is a web application framework built on top of Node.js. Here are some of the main differences between Node.js and Express.js:
@@ -69,21 +82,26 @@ const Blog = () => {
 
 
                 </p>
-            </section>
+            </div>
 
-            <section className='container mb-5'>
+            <div className='container mb-5'>
                 <h4>What is a custom hook, and why will you create a custom hook?</h4>
                 <p>
                     Custom Hook is a JavaScript function which we create by ourselves, when we want to share logic between other JavaScript functions or component.
                     Custom Hooks start with "use". Example: useFetch, useLocalStorage ,useAuthentication
-                    
+
                     You would create a custom hook in order to reuse functionality that is needed in multiple components. By creating a custom hook, you can avoid duplicating code across different components and simplify our code. Custom hooks can also make easier to test code. When we have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
                     The main reason to write a custom hook is for code reusability.
                     It allow us to reuse some piece of code in several parts of my app.
 
                 </p>
-            </section>
-
+            </div>
+            
+            </div>
+            
+            <br />
+            <br />
+           
         </div>
     );
 };

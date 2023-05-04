@@ -23,7 +23,7 @@ const ChefSection = ({chef}) => {
                         <p>Number of recipes:{chef.number_of_recipes}</p>
                         <p>Likes:{chef.likes}</p>
                     </Card.Text>
-                    <Link to={`/recipe/${chef.id}`}><Button variant="primary">View Recipe</Button></Link>
+                    <Link to={`/recipe/${chef.id}`}><Button variant="dark">View Recipe</Button></Link>
                     
                 </Card.Body>
             </Card>
