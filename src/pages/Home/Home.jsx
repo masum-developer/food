@@ -58,9 +58,7 @@ const Home = () => {
           </div>
           
           <br />
-          <br />
-                    
-            
+          <br />  
       <div>
       <h1>
             American Chefs

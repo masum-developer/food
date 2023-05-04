@@ -4,8 +4,6 @@ import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 
 const ErrorPage = () => {
-
-
     const { error, status } = useRouteError()
     return (
         <div>
