@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
     const [error,setError] = useState('');
-    const {createUser,logOut,userProfile} = useContext(AuthContext);
+    const {createUser,logOut,userProfile,googleLogin,githubLogin} = useContext(AuthContext);
     const [accepted,setAccepted] = useState(false)
     const navigate = useNavigate();
     const handleRegister = event =>{
@@ -36,6 +37,24 @@ const Register = () => {
     }
     const handleAccepted = event =>{
         setAccepted(event.target.checked)
+    }
+    const handleGoogleLogin = ()=>{
+        googleLogin()
+        .then(result=>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            navigate('/')
+        })
+        .catch(error=>console.log(error))
+    }
+    const handleGithubLogin = ()=>{
+        githubLogin()
+        .then(result=>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            navigate('/')
+        })
+        .catch(error=>console.log(error))
     }
     return (
         <Container className='w-25 mx-auto pb-5'>
@@ -84,6 +103,10 @@ const Register = () => {
                 </Form.Text>
             </Form>
             <p className='text-danger'>{error}</p>
+            <Button onClick={handleGoogleLogin} className='mb-2 mt-2' variant="outline-info"> <FaGoogle></FaGoogle> Login with Google</Button>
+                <Button onClick={handleGithubLogin} variant="outline-dark"><FaGithub></FaGithub> Login with Github</Button>
+                <br />
+                <br />
 
         </Container>
     );
