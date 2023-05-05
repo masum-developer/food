@@ -16,7 +16,7 @@ const SingleRecipe = ({rec}) => {
     return (
         <div className='py-5 mb-5'>
 
-            <Card style={{height:'50rem'}} className='d-flex align-items flex-column'>
+            <Card style={{height:'49rem'}} className='d-flex align-items flex-column'>
                 <Card.Img variant="top" src={recipe_image} style={{height:'180px'}} />
                 <Card.Body>
                     
@@ -31,7 +31,7 @@ const SingleRecipe = ({rec}) => {
                         <p>{ingredients}</p>
                     </Card.Text>
                     <Card.Text>
-                    <p>Rating: {rating}</p>
+                    <p>Rating: { rating}</p>
                         
                     </Card.Text>
                 </Card.Body>

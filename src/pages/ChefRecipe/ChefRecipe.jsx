@@ -18,9 +18,9 @@ const ChefRecipe = () => {
                 <div style={{width:'48%'}} className='pt-5 ps-3'>
                     <h2>{chef_name}</h2>
                     <p>{biography}</p>
-                    <p>Likes:{likes}</p>
-                    <p>No of Recipes:{number_of_recipes}</p>
-                    <p>Experience:{years_of_experience}</p>
+                    <p>Likes :{likes}</p>
+                    <p>No of Recipes :{number_of_recipes}</p>
+                    <p>Experience :{years_of_experience}</p>
                 </div>
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 container-fluid mx-auto">
