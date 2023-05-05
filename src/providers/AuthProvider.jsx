@@ -32,6 +32,7 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
     const userProfile = (dName,pURL)=>{
+        setLoading(true);
         return updateProfile(auth.currentUser, {
   
   displayName: dName, photoURL: pURL
