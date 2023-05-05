@@ -62,12 +62,12 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required/>
                 </Form.Group>
-                <Form.Group className="mb-1" controlId="formBasicCheckbox">
+                <Form.Group className="mb-1 text-dark" controlId="formBasicCheckbox">
                     <Form.Check
                     onClick={handleAccepted}
                      type="checkbox"
                      name="accept"
-                     label={<>Accept <Link to='/terms'>Terms & Conditions</Link></>} />
+                     label={<>Accept <Link  to='/terms'>Terms & Conditions</Link></>} />
                 </Form.Group>
                 <Button disabled={!accepted} variant="dark" type="submit">
                     Register

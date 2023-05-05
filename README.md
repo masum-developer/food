@@ -13,12 +13,12 @@ A list of feature used within the project:
 
 * In this project I use children props on Auth Provider.
 
-* In this project I use useState, useEffect hook.
+* In this project I use useState, useEffect, useRef, useLocation hook.
 
-* In this project I use private route.
+* In this project I use private route to protect route.
 * In this project I use react print to save pdf.
 
-* In this project I use lazy load to load picture smoothly.
+* In this project I use lazy load to load picture on time.
 
 
 

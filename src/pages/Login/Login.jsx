@@ -25,7 +25,8 @@ const Login = () => {
             navigate(from, { replace: true })
         })
         .catch(error=>{
-            setError(error.message)
+            
+        setError(error.message)
         })
         form.reset();
     }
@@ -68,7 +69,7 @@ const Login = () => {
                     </Button>
                     <br />
                     <Form.Text className="text-secondary">
-                        Don't Have an Account <Link to="/register">Register</Link>
+                        Don't Have an Account <Link className='text-info' to="/register">Register</Link>
                     </Form.Text>
                     <Form.Text className="text-success">
 
@@ -78,8 +79,8 @@ const Login = () => {
                     </Form.Text>
                 </Form>
                 <p className='text-danger'>{error}</p>
-                <Button onClick={handleGoogleLogin} className='mb-2 mt-5' variant="outline-primary"> <FaGoogle></FaGoogle> Login with Google</Button>
-                <Button onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
+                <Button onClick={handleGoogleLogin} className='mb-2 mt-2' variant="outline-info"> <FaGoogle></FaGoogle> Login with Google</Button>
+                <Button onClick={handleGithubLogin} variant="outline-dark"><FaGithub></FaGithub> Login with Github</Button>
             </Container>
         </div>
     );

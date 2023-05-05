@@ -59,7 +59,7 @@ const Home = () => {
           <br />  
       <div>
       <h1>
-            American Chefs
+            Our Top Rated Chefs
             </h1>
             
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">

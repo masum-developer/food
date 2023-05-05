@@ -23,10 +23,10 @@ const Header = () => {
                             </Nav>
                             <Nav className="mx-auto">
                                 <span className='me-5'>
-                                <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark text-decoration-none')} to="/">Home</NavLink>
+                                <NavLink className={({ isActive }) => (isActive ? 'text-success text-decoration-none' : 'text-dark text-decoration-none')} to="/">Home</NavLink>
                                 </span>
                                 <span>
-                                <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'text-dark text-decoration-none')} to="/blog">Blog</NavLink>
+                                <NavLink className={({ isActive }) => (isActive ? 'text-success text-decoration-none' : 'text-dark text-decoration-none')} to="/blog">Blog</NavLink>
                                 </span>
                         
 

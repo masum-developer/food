@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const SingleRecipe = ({rec}) => {
     const [accepted,setAccepted] = useState(true)
     
-    const {recipe_name,ingredients,cooking_method,rating} = rec;
+    const {recipe_name,recipe_image,ingredients,cooking_method,rating} = rec;
 
     const notify = (recipe_name) =>{
         setAccepted(false)
@@ -16,8 +16,8 @@ const SingleRecipe = ({rec}) => {
     return (
         <div className='py-5 mb-5'>
 
-            <Card style={{height:'48rem'}} className='d-flex align-items flex-column'>
-                <Card.Img variant="top" src="" />
+            <Card style={{height:'50rem'}} className='d-flex align-items flex-column'>
+                <Card.Img variant="top" src={recipe_image} style={{height:'180px'}} />
                 <Card.Body>
                     
                     <Card.Title>{recipe_name}</Card.Title>
@@ -34,12 +34,9 @@ const SingleRecipe = ({rec}) => {
                     <p>Rating: {rating}</p>
                         
                     </Card.Text>
-                    
-                    
-                    
                 </Card.Body>
             </Card>
-            <Button disabled={!accepted} onClick={()=>notify(recipe_name)} className='btn btn-success w-100'>Favorite</Button>
+            <Button disabled={!accepted} onClick={()=>notify(recipe_name)} className='btn btn-dark w-100'>Favorite</Button>
             <Toaster />
         </div>
     );
